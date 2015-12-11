@@ -1,7 +1,7 @@
 {
     "css": [
         "//code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.css",
-		"plugins/restoration_techniques/main.css",
+		"plugins/restoration-explorer/main.css",
         "//cdn.sencha.io/ext-4.1.1-gpl/resources/css/ext-all.css"
     ],
     "use": {

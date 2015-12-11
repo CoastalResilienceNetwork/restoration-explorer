@@ -609,6 +609,16 @@
 					"helpTable": "tidalRangeMarsh"
 				},
 				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityMarsh"
+				},
+				{
 					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
@@ -698,6 +708,16 @@
 					"helpTable": "tidalRangeMarsh"
 				},
 				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityMarsh"
+				},
+				{
 					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
@@ -716,7 +736,17 @@
 					"groupsBelow": "no",
 					"identifyNumber": "",
 					"helpTable": "iceCoverMarsh"
-				},						
+				},
+				{
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeMarsh"
+				},				
 				{
 					"text": "Nearshore Slope",
 					"selected": false,
@@ -777,6 +807,16 @@
 					"helpTable": "tidalRangeMarsh"
 				},
 				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityMarsh"
+				},
+				{
 					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
@@ -795,6 +835,26 @@
 					"groupsBelow" : "no",
 					"identifyNumber": "",
 					"helpTable": "iceCoverMarsh"
+				},
+				{
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeMarsh"
+				},				
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeMarsh"
 				}
             ]
         },
@@ -846,6 +906,16 @@
 					"helpTable": "tidalRangeUpland"
 				},
 				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityUpland"
+				},
+				{
 					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
@@ -864,7 +934,17 @@
 					"groupsBelow": "no",
 					"identifyNumber": "",
 					"helpTable": "iceCoverUpland"
-				},						
+				},	
+				{
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeUpland"
+				},				
 				{
 					"text": "Nearshore Slope",
 					"selected": false,
@@ -1024,6 +1104,16 @@
 					"helpTable": "tidalRangeUpland"
 				},
 				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityUpland"
+				},
+				{
 					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
@@ -1042,7 +1132,17 @@
 					"groupsBelow": "no",
 					"identifyNumber": "",
 					"helpTable": "iceCoverUpland"
-				},						
+				},		
+				{	
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeUpland"
+				},				
 				{
 					"text": "Nearshore Slope",
 					"selected": false,
@@ -1103,6 +1203,16 @@
 					"helpTable": "tidalRangeUpland"
 				},
 				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityUpland"
+				},
+				{
 					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
@@ -1121,6 +1231,26 @@
 					"groupsBelow" : "no",
 					"identifyNumber": "",
 					"helpTable": "iceCoverUpland"
+				},
+				{	
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeUpland"
+				},				
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeUpland"
 				}
             ]
         }

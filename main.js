@@ -8,7 +8,7 @@ require({
     ]
 });
 define([
-        "dojo/_base/declare", "framework/PluginBase", 'plugins/restoration_techniques/ConstrainedMoveable', 'plugins/restoration_techniques/jquery-ui-1.11.0/jquery-ui',
+        "dojo/_base/declare", "framework/PluginBase", 'plugins/restoration-explorer/ConstrainedMoveable', 'plugins/restoration-explorer/jquery-ui-1.11.0/jquery-ui',
 		
 		"esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/FeatureLayer", "esri/tasks/QueryTask", "esri/tasks/query", "esri/graphicsUtils", 
 		"esri/geometry/Extent", "esri/SpatialReference", "esri/geometry/Point", "esri/graphic",
@@ -39,15 +39,15 @@ define([
 				rendered: false,
 				width: "295",
 				height: "580",
-				infoGraphic: "plugins/restoration_techniques/images/infoGraphic.jpg",
+				infoGraphic: "plugins/restoration-explorer/images/infoGraphic.jpg",
 				
 				initialize: function (frameworkParameters) {
 					declare.safeMixin(this, frameworkParameters);
 					domClass.add(this.container, "claro");
-					con = dom.byId('plugins/restoration_techniques-0');
+					con = dom.byId('plugins/restoration-explorer-0');
 						domStyle.set(con, "width", "295px");
 						domStyle.set(con, "height", "580px");
-					con1 = dom.byId('plugins/restoration_techniques-1');
+					con1 = dom.byId('plugins/restoration-explorer-1');
 					if (con1 != undefined){
 						domStyle.set(con1, "width", "295px");
 						domStyle.set(con1, "height", "580px");
@@ -498,7 +498,7 @@ define([
 									on(infoPic, "click", lang.hitch(this,function(e){
 										domStyle.set(this.infopic.domNode, 'display', 'block');
 										this.config.infoPicDisplay = "block";
-										this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + option.helpText + ".jpg'>";
+										this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration-explorer/images/" + option.helpText + ".jpg'>";
 										this.config.infoPicContent = this.infoPicContent.innerHTML;
 									}));
 									
@@ -554,7 +554,7 @@ define([
 										if (option.helpTable != undefined){
 											domStyle.set(this.infoarea.domNode, 'display', 'block');
 											this.config.infoDisplay = "block";
-											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>How each restoration technique meets the " + option.text + " parameter</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
+											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>How each restoration technique meets the " + option.text + " condition</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
 											
 											var tblid = this.sliderpane.id + '_infoTable'
 											var naPresent = "no"
@@ -646,7 +646,7 @@ define([
 						if (e.target.innerHTML == "Breakwater"){ht = "Breakwater"}	
 						if (e.target.innerHTML == "Ecologically Enhanced Revetment"){ht = "EcoRevetment"}	
 						if (e.target.innerHTML == "Beach Restoration"){ht = "BeachRestoration"}	
-						this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + ht + ".jpg'>";	
+						this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration-explorer/images/" + ht + ".jpg'>";	
 						this.config.infoPicContent = this.infoPicContent.innerHTML;				
 					}));					
 					this.resize();
@@ -1143,7 +1143,7 @@ define([
 						if (e.target.innerHTML == "Breakwater"){ht = "Breakwater"}	
 						if (e.target.innerHTML == "Ecologically Enhanced Revetment"){ht = "EcoRevetment"}	
 						if (e.target.innerHTML == "Beach Restoration"){ht = "BeachRestoration"}	
-						this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + ht + ".jpg'>";	
+						this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration-explorer/images/" + ht + ".jpg'>";	
 						this.config.infoPicContent = this.infoPicContent.innerHTML;				
 					}));
 				},
@@ -1175,7 +1175,7 @@ define([
 							pn = picNames[sp+1]	
 						}
 					}					
-					this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + pn + ".jpg'>";											
+					this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration-explorer/images/" + pn + ".jpg'>";											
 					this.config.infoPicContent = this.infoPicContent.innerHTML
 				},
 				
