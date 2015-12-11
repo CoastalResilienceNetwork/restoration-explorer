@@ -1,0 +1,1269 @@
+{
+    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
+    "methods": "plugins/restoration_techniques/njmethods.pdf",
+	"userGuide": "plugins/restoration_techniques/UserGuide.pdf",
+	"infoGraphic": "plugins/restoration_techniques/images/infoGraphic.jpg",
+	"visibleLayers": [],
+	"infoDisplay": "none",
+	"infoContent": "",
+	"infoPicDisplay": "none",
+	"infoPicContent": "",
+	"idenVal": "",
+	"idenGroup": "",
+	"idenType": "",
+	"atts": "",
+	"idenGraphic": "",
+	"extent": "",
+	"techName": "",
+	"munCheck": "",
+	"controls": [
+        {
+            "type": "group",
+			"control": "dropdown",
+			"layerNumber": "0",
+			"field": "COUNTY",
+			"field1": "MUN",
+			"selectedCounty": "",
+			"municipalities": [],
+			"selectedMun": ""
+        },
+		{
+            "type": "group",
+			"level": "1",
+			"control": "radio",
+			"parentValue": "",
+			"display": "none",
+			"header": [
+				{
+					"text": "1. Select the shoreline type",
+					"name": "level_1",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"
+				}
+			],
+			"options": [
+				{
+                    "text": "Tidal Marsh",
+                    "selected": false,
+                    "value": "marsh",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                },
+				{
+                    "text": "Forested, Beach or Bulkhead",
+                    "selected": false,
+                    "value": "beach",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+		{
+			"type": "group",
+			"level": "2",
+			"control": "radio",
+			"parentValue": "marsh",
+			"display": "none",
+			"header": [
+				{
+					"text": "2. Select a disturbance process",
+					"name": "level_2a",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"
+				}
+			],	
+            "options": [
+                {
+                    "text": "Shoreline edge erosion",
+                    "selected": false,
+                    "value": "m_erosion",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+		{
+			"type": "group",
+			"level": "2",
+			"control": "radio",
+			"parentValue": "beach",
+			"display": "none",
+			"header": [
+				{
+					"text": "2. Select a disturbance process",
+					"name": "level_2b",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"					
+				}
+			],	
+            "options": [
+                {
+                    "text": "Shoreline edge erosion",
+                    "selected": false,
+                    "value": "b_erosion",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+		{
+            "type": "group",
+			"level": "3",
+			"control": "radio",
+			"parentValue": "m_erosion",
+			"display": "none",
+			"header": [
+				{
+					"text": "3. How would you like to view results?",
+					"name": "level_3a",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"
+				}
+			],
+			"options": [
+				{
+                    "text": "Show All Techniques in One Map",
+                    "selected": false,
+                    "value": "m_combined",
+					"showData": "yes",
+					"layerNumber": "12",
+					"identifyNumber": "13",
+					"identifyGroup": "1",
+					"groupsBelow" : "yes"
+                },
+				{
+                    "text": "Show Information on Individual Techniques",
+                    "selected": false,
+                    "value": "m_detailed",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+		{
+            "type": "group",
+			"level": "3",
+			"control": "radio",
+			"parentValue": "b_erosion",
+			"display": "none",
+			"header": [
+				{
+					"text": "3. How would you like to view results?",
+					"name": "level_3b",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"
+				}
+			],
+			"options": [
+				{
+                    "text": "Show All Techniques in One Map",
+                    "selected": false,
+                    "value": "b_combined",
+					"showData": "yes",
+					"layerNumber": "23",
+					"identifyNumber": "24",
+					"identifyGroup": "1",
+					"groupsBelow" : "yes"
+                },
+				{
+                    "text": "Show Information on Individual Techniques",
+                    "selected": false,
+                    "value": "b_detailed",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+        {
+            "type": "group",
+			"level": "4",
+			"control": "radio",
+			"parentValue": "m_detailed",
+			"display": "none",
+			"header": [
+				{
+					"text": "4. Select shoreline enhancement technique",
+					"name": "level_4a",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"
+				}
+			],
+            "options": [
+                {
+                    "text": "<a class='epa1'>Nature-Based Living Shoreline</a>",
+                    "selected": false,
+                    "value": "shoreline_m",
+					"showData": "yes",
+					"layerNumber": "2",
+					"identifyNumber": "3",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+                },
+				{
+                    "text": "<a class='epa1'>Living Reef Breakwater</a>",
+                    "selected": false,
+                    "value": "reef_m",
+					"showData": "yes",
+					"layerNumber": "4",
+					"identifyNumber": "5",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				},
+                {
+                    "text": "<a class='epa1'>Marsh Sill</a>",
+                    "selected": false,
+                    "value": "sill_m",
+					"showData": "yes",
+					"layerNumber": "6",
+					"identifyNumber": "7",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "<a class='epa1'>Breakwater</a>",
+                    "selected": false,
+                    "value": "breakwater_m",
+					"showData": "yes",
+					"layerNumber": "8",
+					"identifyNumber": "9",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "<a class='epa1'>Ecologically Enhanced Revetment</a>",
+                    "selected": false,
+                    "value": "revetment_m",
+					"showData": "yes",
+					"layerNumber": "10",
+					"identifyNumber": "11",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+            "control": "radio",
+			"parentValue": "b_detailed",
+			"display": "none",
+			"header": [
+				{
+					"text": "4. Select shoreline enhancement technique",
+					"name": "level_4b",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"
+				}
+			],
+            "options": [
+                {
+                    "text": "<a class='epa1'>Beach Restoration</a>",
+                    "selected": false,
+                    "value": "restoration_b",
+					"showData": "yes",
+					"layerNumber": "15",
+					"identifyNumber": "16",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "<a class='epa1'>Living Reef Breakwater</a>",
+                    "selected": false,
+                    "value": "reef_b",
+					"showData": "yes",
+					"layerNumber": "17",
+					"identifyNumber": "18",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "<a class='epa1'>Breakwater</a>",
+                    "selected": false,
+                    "value": "breakwater_b",
+					"showData": "yes",
+					"layerNumber": "19",
+					"identifyNumber": "20",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "<a class='epa1'>Ecologically Enhanced Revetment</a>",
+                    "selected": false,
+                    "value": "revetment_b",
+					"showData": "yes",	
+					"layerNumber": "21",
+					"identifyNumber": "22",
+					"identifyGroup": "2",
+					"groupsBelow" : "yes"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+			"control": "checkbox",
+			"parentValue": "m_combined",
+			"display": "none",
+			"header": [
+				{
+					"text": "Show All Techniques on One Map",
+					"name": "level_4c",
+					"helpTitle": "All Techniques",
+					"helpText": "Click on individual squares on the map to see how many of the techniques are appropriate for that area",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+				{
+                    "text": "Turn results on or off",
+                    "selected": true,
+                    "value": "m_techniques",
+					"showData": "yes",
+					"layerNumber": "12",
+					"identifyNumber": "13",
+					"identifyGroup": "1",
+					"groupsBelow" : "no",
+					"leaveOn": "yes"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+			"control": "checkbox",
+			"parentValue": "b_combined",
+			"display": "none",
+			"header": [
+				{
+					"text": "Show All Techniques on One Map",
+					"name": "level_4d",
+					"helpTitle": "All Upland/Beach Techniques",
+					"helpText": "Click on individual blocks on the map to see how many of the techniques appropriate for that area",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+				{
+                    "text": "All Upland/Beach Shoreline Techniques",
+                    "selected": true,
+                    "value": "m_techniques",
+					"showData": "yes",
+					"layerNumber": "23",
+					"identifyNumber": "24",
+					"identifyGroup": "1",
+					"groupsBelow" : "no",
+					"leaveOn": "yes"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "shoreline_m",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5a",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Nature-Based Living Shoreline",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "2",
+					"groupsBelow" : "no",
+					"identifyNumber": "3",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeMarsh"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeMarsh"
+				},
+				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityMarsh"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightMarsh"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverMarsh"
+				},						
+				{
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeMarsh"
+				},
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeMarsh"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "reef_m",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5d",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Living Reef Breakwater",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "4",
+					"groupsBelow" : "no",
+					"identifyNumber": "5",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeMarsh"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeMarsh"
+				},
+				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityMarsh"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightMarsh"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverMarsh"
+				},						
+				{
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeMarsh"
+				},
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeMarsh"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "sill_m",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5b",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Marsh Sill",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "6",
+					"groupsBelow" : "no",
+					"identifyNumber": "7",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeMarsh"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeMarsh"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightMarsh"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverMarsh"
+				},						
+				{
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeMarsh"
+				},
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeMarsh"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "breakwater_m",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5c",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Breakwater",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "8",
+					"groupsBelow" : "no",
+					"identifyNumber": "9",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeMarsh"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeMarsh"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightMarsh"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverMarsh"
+				},						
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeMarsh"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "revetment_m",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5e",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Ecologically Enhanced Revetment",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "10",
+					"groupsBelow" : "no",
+					"identifyNumber": "11",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeMarsh"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeMarsh"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightMarsh"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverMarsh"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "restoration_b",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5f",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Beach Restoration",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "15",
+					"groupsBelow" : "no",
+					"identifyNumber": "16",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeUpland"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeUpland"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightUpland"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverUpland"
+				},						
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeUpland"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "reef_b",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5d",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Living Reef Breakwater",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "17",
+					"groupsBelow" : "no",
+					"identifyNumber": "18",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeUpland"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeUpland"
+				},
+				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "31",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityUpland"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightUpland"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverUpland"
+				},						
+				{
+					"text": "Shoreline Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "29",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineSlopeUpland"
+				},
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeUpland"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "breakwater_b",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5c",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Breakwater",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "19",
+					"groupsBelow" : "no",
+					"identifyNumber": "20",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeUpland"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeUpland"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightUpland"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverUpland"
+				},						
+				{
+					"text": "Nearshore Slope",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "30",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "nearshoreSlopeUpland"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+            "control": "checkbox",
+			"parentValue": "revetment_b",
+			"display": "none",
+			"header": [
+				{
+					"text": "<b>View more information on key environmental conditions</b>",
+					"name": "level_5e",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Ecologically Enhanced Revetment",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "21",
+					"groupsBelow" : "no",
+					"identifyNumber": "22",
+					"identifyGroup": "2",
+					"leaveOn": "yes"
+				},
+				{
+					"text": "Erosion Shoreline Change",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "27",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "shorelineChangeUpland"
+				},
+				{
+					"text": "Tidal Range",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "28",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "tidalRangeUpland"
+				},
+				{
+					"text": "Wave Height",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "32",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "waveHeightUpland"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "26",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"helpTable": "iceCoverUpland"
+				}
+            ]
+        }
+    ],
+	"iceCoverMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["Low", "Yes", "Yes", "Yes", "Yes","Yes"],
+			"row2": ["Moderate", "Yes", "Yes", "Yes", "Yes","Yes"],
+			"row3": ["High", "No", "No", "No", "Yes","Yes"],
+			"row4": ["Higher", "No", "No", "No", "Yes","Yes"],
+			"row5": ["Highest", "No", "No", "No", "Yes","No"]
+		}
+	],	
+	
+	"iceCoverUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["Low", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["Moderate", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["High", "Yes", "No", "Yes", "Yes"],
+			"row4": ["Higher", "Yes", "No", "Yes", "Yes"],
+			"row5": ["Highest", "Yes", "No", "No", "Yes"]
+		}
+	],	
+	"nearshoreSlopeMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "No", "No", "No", "Yes", "No"],
+			"row4": ["15-20%", "No", "No", "No", "Yes", "No"],
+			"row5": ["> 20%", "No", "No", "No", "Yes", "No"]
+		}
+	],
+	"nearshoreSlopeUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "No", "No", "No", "Yes"],
+			"row4": ["15-20%", "No", "No", "No", "Yes"],
+			"row5": ["> 20%", "No", "No", "No", "Yes"]
+		}
+	],
+	"shorelineSlopeMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "No", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["15-20%", "No", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 20%", "No", "No", "No", "Yes", "Yes"]
+		}
+	],
+	"shorelineSlopeUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["15-20%", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 20%", "No", "No", "Yes", "Yes"]
+		}
+	],
+	"waveHeightMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["<1 ft", "Yes", "Yes", "Yes", "NA*", "NA*"],
+			"row2": ["1-2 ft", "No", "Yes", "Yes", "Yes", "NA*"],
+			"row3": ["2-3 ft", "No", "Yes", "Yes", "Yes", "NA*"],
+			"row4": ["3-4 ft", "No", "No", "No", "Yes", "Yes"],
+			"row5": ["> 4 ft", "No", "No", "No", "Yes", "Yes"]
+		}
+	],
+	"waveHeightUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["<1 ft", "Yes", "Yes", "NA*", "NA*"],
+			"row2": ["1-2 ft", "Yes", "Yes", "NA*", "Yes"],
+			"row3": ["2-3 ft", "Yes", "Yes", "NA*", "Yes"],
+			"row4": ["3-4 ft", "Yes", "No", "Yes", "Yes"],
+			"row5": ["> 4 ft", "Yes", "No", "Yes", "Yes"]
+		}
+	],
+	"salinityMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-1 ppt", "No", "No", "Yes", "Yes", "Yes"],
+			"row2": ["1-3 ppt", "No", "No", "Yes", "Yes", "Yes"],
+			"row3": ["3-10 ppt", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["10-30 ppt", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 30 ppt", "No", "No", "Yes", "Yes", "Yes"]
+		}
+	],
+	"salinityUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-1 ppt", "Yes", "No", "Yes", "Yes"],
+			"row2": ["1-3 ppt", "Yes", "No", "Yes", "Yes"],
+			"row3": ["3-10 ppt", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["10-30 ppt", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 30 ppt", "Yes", "No", "Yes", "Yes"]	
+		}
+	],
+	"tidalRangeMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-2 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["2-4 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["4-6 ft", "No", "No", "No", "Yes", "Yes"],
+			"row4": ["> 6 ft", "No", "No", "No", "Yes", "Yes"]
+		}
+	],
+	"tidalRangeUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-2 ft", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["2-4 ft", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["4-6 ft", "Yes", "No", "Yes", "Yes"],
+			"row4": ["> 6 ft", "Yes", "No", "Yes", "Yes"]	
+		}
+	],
+	"shorelineChangeMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["Accretion", "NA*", "NA*", "NA*", "NA*", "NA*"],
+			"row2": ["0-2 ft/yr", "Yes", "Yes", "Yes", "NA*", "NA*"],
+			"row3": ["2-4 ft/yr", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["4-6 ft/yr", "No", "No", "No", "Yes", "Yes"],
+			"row5": [">6 ft/yr", "No", "No", "No", "Yes", "Yes"]		
+		}
+	],
+	"shorelineChangeUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["Accretion", "NA*", "NA*", "NA*", "NA*"],
+			"row2": ["0-2 ft/yr", "Yes", "Yes", "NA*", "NA*"],
+			"row3": ["2-4 ft/yr", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["4-6 ft/yr", "No", "No", "Yes", "Yes"],
+			"row5": [">6 ft/yr", "No", "No", "Yes", "Yes"]
+		}
+	]
+}
+
+
