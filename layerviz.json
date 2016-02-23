@@ -1,8 +1,8 @@
 {
     "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
-    "methods": "plugins/restoration-explorer/njmethods.pdf",
-	"userGuide": "plugins/restoration-explorer/UserGuide.pdf",
-	"infoGraphic": "plugins/restoration-explorer/images/infoGraphic.jpg",
+    "methods": "plugins/restoration_techniques/njmethods.pdf",
+	"userGuide": "plugins/restoration_techniques/UserGuide.pdf",
+	"infoGraphic": "plugins/restoration_techniques/images/infoGraphic.jpg",
 	"visibleLayers": [],
 	"infoDisplay": "none",
 	"infoContent": "",
@@ -391,7 +391,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -490,7 +490,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -589,7 +589,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -688,7 +688,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -787,7 +787,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -886,7 +886,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -985,7 +985,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -1084,7 +1084,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -1183,7 +1183,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
