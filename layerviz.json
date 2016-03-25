@@ -3,6 +3,7 @@
     "methods": "plugins/restoration_techniques/njmethods.pdf",
 	"userGuide": "plugins/restoration_techniques/UserGuide.pdf",
 	"infoGraphic": "plugins/restoration_techniques/images/infoGraphic.jpg",
+	"comResourceGuide": "plugins/restoration_techniques/CommunityResourceGuideForPlanningLivingShorelinesProjects.pdf",
 	"visibleLayers": [],
 	"infoDisplay": "none",
 	"infoContent": "",
