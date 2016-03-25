@@ -302,7 +302,7 @@ define([
 					});
 					domClass.add(menu.domNode, "claro");
 					//infos = ["Community Guide","Methods","User Guide"]
-					infos = ["Methods","User Guide"]
+					infos = ["Methods","User Guide","Community Resource Guide"]
 					var cl = infos.length - 1;
 					array.forEach(infos, lang.hitch(this,function(v, j){
 						if (j == cl){
@@ -319,6 +319,9 @@ define([
 								}
 								if (v == "User Guide"){
 									window.open(this.config.userGuide)
+								}
+								if (v == "Community Resource Guide"){
+									window.open(this.config.comResourceGuide)
 								}
 							})												
 						});
