@@ -753,7 +753,7 @@ define([
 								dojo.byId(this.button1).set("label", m);
 								this.controls[groupid].selectedMun = m;
 								this.extentCheck = "second"
-								ga('send', 'event', 'NJ Restoration Explorer', 'municipal click', v + ' County - ' + m);
+								//ga('send', 'event', 'NJ Restoration Explorer', 'municipal click', v + ' County - ' + m);
 							})
 						});
 						this.menu1.addChild(menuItem1);
