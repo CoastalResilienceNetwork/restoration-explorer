@@ -788,7 +788,7 @@ define([
 							$('#' + this.sliderpane.id + 'idIntro').show();		
 						}
 					}		
-					var url = "http://sugar.rutgers.edu/tncre/#/process?action=flood&mun_code=" + f[0].attributes.MUN_CODE
+					var url = "http://www.njfloodmapper.org/snapshot/#/process?action=tncre&mun_code=" + f[0].attributes.MUN_CODE
 					$('#' + this.sliderpane.id + "munSumLink").attr("href", url)
 					$('#' + this.sliderpane.id + "munSum").show()
 					$('#' + this.sliderpane.id + '_1').show();
