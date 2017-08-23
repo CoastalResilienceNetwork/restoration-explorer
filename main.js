@@ -991,14 +991,14 @@ define([
 						$('#' + this.sliderpane.id + 'techTitle').html($(this.config.techName).html());
 						$('#' + this.sliderpane.id + 'techTitle').show();
 						if (atts.ErosionCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>Not Appilcable</b>').show();
+							$('#' + this.sliderpane.id + 'erosion').html('Shoreline Change Rate: <b>Not Appilcable</b>').show();
 						}
 						if (atts.ErosionCriteriaThreshold == 1){
-							$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>No - ' +
+							$('#' + this.sliderpane.id + 'erosion').html('Shoreline Change Rate: <b>No - ' +
 							atts.ErosionCriteriaValue + ' feet/year</b>').show();
 						}
 						if (atts.ErosionCriteriaThreshold == 2){
-							$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>Yes - ' +
+							$('#' + this.sliderpane.id + 'erosion').html('Shoreline Change Rate: <b>Yes - ' +
 							atts.ErosionCriteriaValue + ' feet/year</b>').show();
 						}
 						if (atts.SalinityCriteriaThreshold == 0){
