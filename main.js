@@ -32,7 +32,8 @@ define([
 					layerViz, $ ) {
 					
 			return declare(PluginBase, {
-				toolbarName: "Restoration Explorer",
+				toolbarName: "Living Shoreline",
+				fullName: "Living Shoreline",
 				toolbarType: "sidebar",
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: false,
