@@ -32,8 +32,8 @@ define([
 					layerViz, $ ) {
 					
 			return declare(PluginBase, {
-				toolbarName: "Living Shoreline",
-				fullName: "Living Shoreline",
+				toolbarName: "Living Shorelines",
+				fullName: "Living Shorelines",
 				toolbarType: "sidebar",
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: false,
