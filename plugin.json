@@ -1,8 +1,6 @@
 {
     "css": [
-        "//code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.css",
-		"plugins/restoration-explorer/main.css",
-        "//cdn.sencha.io/ext-4.1.1-gpl/resources/css/ext-all.css"
+		"plugins/marsh-explorer/css/main.css"
     ],
     "use": {
         "underscore": { "attach": "_" },

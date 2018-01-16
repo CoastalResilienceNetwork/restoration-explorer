@@ -1,0 +1,123 @@
+﻿<!--This HTML is used in the render function to build the elements within the plugin. The render function first creates a
+Dijit ContentPane to hold all the elements. The ContentPane is assigned a dynamic id upon creation. The render function
+takes the ContentPane id and prepends it to every element with a declared id in this HTML before the elements are created.
+The unique ContentPane id makes all the element ids unique and prevents duplicate id errors across other apps.-->
+<section id="top-wrap" class="me-top-wrap">
+	<h3>Select area of interest</h3>
+	<div class="chosen-wrap" style="margin-bottom:10px; margin-left:3px;">
+		<select data-placeholder="Select a County" id="selectCounty" class="chosen">
+			<option></option>
+		</select>
+	</div>
+	<div class="couny-selected-wrap">
+		<h3>View Results By</h3>
+		<div class="vr-rb-wrap toggle-btn">
+			<input type="radio" id="vr-rb1" name="vr-rb" value="DL_DT_ER_UV">
+			<label class="form-component" for="vr-rb1">Combined Ranking</label>
+			<input type="radio" id="vr-rb2" name="vr-rb" value="select-rankings">
+			<label class="form-component" for="vr-rb2">Selected Rankings</label>
+		</div>	
+		<div class="vr-cb-flex">
+			<div class="vr-cb-row">
+				<label class="form-component" for="DL">
+					<input type="checkbox" id="DL" name="mgs" value="DL">
+					<div class="check"></div>
+					<span class="form-text">Dredged Lagoons</span>
+				</label>
+				<label class="form-component" for="DT">
+					<input type="checkbox" id="DT" name="mgs" value="DT">
+					<div class="check"></div>
+					<span class="form-text">Linear Ditching</span>
+				</label>
+			</div>
+			<div class="vr-cb-row">	
+				<label class="form-component" for="ER">
+					<input type="checkbox" id="ER" name="mgs" value="ER">
+					<div class="check"></div>
+					<span class="form-text">Marsh Edge Erosion</span>
+				</label>
+				<label class="form-component" for="UV">
+					<input type="checkbox" id="UV" name="mgs" value="UV">
+					<div class="check"></div>
+					<span class="form-text">Unvegetated Marsh</span>
+				</label>
+			</div>	
+		</div>	
+		<h4 id="click-selected">Click individual rankings for more info</h4>
+		<div id="me-sh-atts" class="hide">
+			<div id="ind-att-wrap" class="ind-att-wrap">
+				<div id="close-atts" class="me-close-atts"><img src="plugins/marsh-explorer/images/infoClose.png" alt="close attribute window"></div>
+				<div class="me-att-row"> <div>Dredged Lagoon (Acres):<span class="DL_Acres"></span></div> </div>
+				<div class="me-att-row"> <div>Linear Ditching (Miles):<span class="DT_Miles"></span></div>	</div>
+				<div class="me-att-row"> <div>Ditching Per Marsh Acre:<span class="DT_per_Acr"></span></div>	</div>
+				<div class="me-att-row"> <div>Edge Erosion (Acres):<span class="ER_Acre"></span></div> </div>
+				<div class="me-att-row"> <div>Erosion Per Marsh Acre:<span class="ER_perAcr"></span></div> </div>
+				<div class="me-att-row"> <div>Vegetated Marsh Acres:<span class="Veg_Acre"></span></div> </div>
+				<div class="me-att-row"> <div>Unvegetated Marsh Acres:<span class="UV_Acre"></span></div> </div>
+				<div class="me-att-row"> <div>% of Unvegetated Marsh Acres:<span class="UV_Percent"></span></div>	</div>
+				<div class="me-att-row"> <div>Unvegetated-Vegetated Ratio:<span class="UVVR"></span></div> </div>
+				<div class="me-att-row"> <div>Tidal Marsh Acres:<span class="Wtld_Acre"></span></div> </div>
+			</div>
+		</div>	
+		<div class="sup-data-wrap">
+			<h3>View Supporting Data</h3>
+			<div class="sup-data-cb-wrap">
+				<label class="form-component sup-data-narrow" for="UDL">
+					<input type="checkbox" id="UDL" name="sd" value="16">
+					<div class="check"></div>
+					<span class="form-text">Dredged Lagoons</span>
+				</label>
+				<label class="form-component sup-data-narrow" for="CDL">
+					<input type="checkbox" id="CDL" name="sd" value="17">
+					<div class="check"></div>
+					<span class="form-text">Linear Ditching</span>
+				</label>
+				<label class="form-component sup-data-narrow" for="MEL">
+					<input type="checkbox" id="MEL" name="sd" value="18">
+					<div class="check"></div>
+					<span class="form-text">Marsh Edge Erosion</span>
+				</label>
+				<label class="form-component sup-data-narrow" for="UVL">
+					<input type="checkbox" id="UVL" name="sd" value="19">
+					<div class="check"></div>
+					<span class="form-text">Unvegetated Marsh</span>
+				</label>
+				<label class="form-component sup-data-wide" for="FNC">
+					<input type="checkbox" id="FNC" name="sd" value="22">
+					<div class="check"></div>
+					<span class="form-text">Federal Navigation Channels</span>
+				</label>
+				<label class="form-component sup-data-wide" for="SCP">
+					<input type="checkbox" id="SCP" name="sd" value="21">
+					<div class="check"></div>
+					<span class="form-text">Sediment Cores</span>
+				</label>
+				<div class="me-scClicks">
+					<div id="scLabel" class="scLabel">Click points for more info</div>
+					<div class="sc-att-wrap">
+						<div class="sc-flex-atts">
+							<div>Sand: <span id="-Sand"></span></div>
+							<div>Silt: <span id="-Silt"></span></div>
+							<div>Clay: <span id="-Clay"></span></div>
+						</div>
+					</div>	
+				</div>
+				<label class="form-component sup-data-wide" for="SDR">
+					<input type="checkbox" id="SDR" name="sd" value="23">
+					<div class="check"></div>
+					<span class="form-text">Sediment Distribution</span>
+				</label>
+				<div class="me-sdClicks">
+					<div id="sdLabel" class="scLabel">Click raster for more info</div>
+					<div class="sd-att-wrap">
+						<div>Sand: <span id="PixelValue"></span></div>
+					</div>	
+				</div>	
+			</div>
+			<div class="button-wrap">
+				<button class="button button-primary" id="methodsBtn">Methods</button>
+			</div>	
+		</div>
+	</div>
+</section>
+
