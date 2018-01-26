@@ -1,6 +1,6 @@
 {
     "css": [
-		"plugins/marsh-explorer/css/main.css"
+		"plugins/restoration-explorer/css/main.css"
     ],
     "use": {
         "underscore": { "attach": "_" },

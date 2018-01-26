@@ -2,11 +2,65 @@
 Dijit ContentPane to hold all the elements. The ContentPane is assigned a dynamic id upon creation. The render function
 takes the ContentPane id and prepends it to every element with a declared id in this HTML before the elements are created.
 The unique ContentPane id makes all the element ids unique and prevents duplicate id errors across other apps.-->
-<section id="top-wrap" class="re-top-wrap">
+<div class="ls-wrap">
 	<div class="chosen-wrap" style="margin-bottom:10px; margin-left:3px;">
 		<select data-placeholder="Select a County" id="selectCounty" class="chosen">
 			<option></option>
 		</select>
 	</div>
-</section>
-
+	<div class="chosen-wrap" style="margin-bottom:0px; margin-left:3px; display:none;">
+		<select data-placeholder="Choose a Municipality" id="selectMuni" class="chosen">
+			<option></option>
+		</select>
+	</div>
+	<div id="sl-type" class="ls-first-choice-wrap sl-type">	
+		<h4>1. Select the shoreline type</h4>
+		<label class="form-component" for="tidal-marsh">
+			<input type="radio" id="tidal-marsh" value="tidal-marsh" name="sl-type">
+			<div class="check"></div>
+			<span class="form-text">Tidal Marsh</span>
+		</label>
+		<label class="form-component" for="forest-beach-bulk">
+			<input type="radio" id="forest-beach-bulk" value="forest-beach-bulk" name="sl-type">
+			<div class="check"></div>
+			<span class="form-text">Forested, Beach, or Bulkhead</span>
+		</label>
+	</div>
+	<div id="dis-pro" class="ls-choice-wraps dis-pro">	
+		<h4>2. Select a disturbance process</h4>
+		<label class="form-component" for="shore-edge">
+			<input type="radio" id="shore-edge" name="dis-pro">
+			<div class="check"></div>
+			<span class="form-text">Shoreline Edge Erosion</span>
+		</label>
+	</div>
+	<div id="view-results" class="ls-choice-wraps view-results">
+		<h4>3. How would you like to view results?</h4>
+		<label class="form-component" for="all-tech">
+			<input type="radio" id="all-tech" value="all-tech" name="techs">
+			<div class="check"></div>
+			<span class="form-text">Show All Techniques in One Map</span>
+		</label>
+		<div id="all-tech-info" class="ls-results-wrap all-tech-info">
+			<div class="ati-instr">Click on individual squares on the map to see how many of the techniques are appropriate for that area.</div>
+			<div class="ati-wrap">
+				<div class="ati-hdr">Shoreline Enhancement Techniques</div>
+				<div id="tm-techs-wrap" class="tm-techs-wrap">	
+					<ul style="margin-left:-20px; margin-bottom:0">
+						<li><a href="">Nature-Based Living Shoreline</a>: <span id="nblsParams">X parameters met</span></li>
+						<li><a href="">Living Reef Breakwater</a>: <span id="lrbParams">X parameters met</span></li>
+						<li><a href="">Marsh Sill</a>: <span id="msParams">X parameters met</span></li>
+						<li><a href="">Breakwater</a>: <span id="bwParams">X parameters met</span></li>
+						<li><a href="">Ecologically Enhanced Revetment</a>: <span id="eerParams">X parameters met</span></li>
+					</ul>
+					<div style="margin-left:5px;">Total Techniques:<span>x</span></div>
+				</div>	
+			</div>	
+		</div>
+		<label class="form-component" for="ind-tech">
+			<input type="radio" id="ind-tech" value="ind-tech" name="techs">
+			<div class="check"></div>
+			<span class="form-text">Show Information on Individual Techniques</span>
+		</label>
+	</div>	
+</div>

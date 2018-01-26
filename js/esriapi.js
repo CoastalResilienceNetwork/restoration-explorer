@@ -22,17 +22,7 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 					t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 				}
 				t.dynamicLayer.on("load", function () { 			
-					t.layersArray = t.dynamicLayer.layerInfos;
-					t.lyr = ""
-					$.each(t.types, function(i,v){
-						if(t.obj[v]){
-							if (t.lyr.length == 0){
-								t.lyr = v;
-							}else{
-								t.lyr = t.lyr + "_" + v;
-							}
-						}
-					})					
+					t.layersArray = t.dynamicLayer.layerInfos;				
 					if (t.obj.stateSet == "no"){
 						
 					}
@@ -46,14 +36,19 @@ function ( 	ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, Query
 				});		
 				// query to populate chosen menu
 				var q = new Query();
-				var qt = new QueryTask(t.url + "/" + t.lyrs.bounds );
+				var qt = new QueryTask(t.url + "/0" );
 				q.where = "OBJECTID > -1";
 				q.returnGeometry = false;
 				q.outFields = ["*"];
 				var c = [];
 				qt.execute(q, function(e){
 					$.each(e.features, function(i,v){
-						$('#' + t.id + 'selectCounty').append("<option value='" + v.attributes.Group_ + "'>"+ v.attributes.Group_ +"</option")
+						t.atts.push(v.attributes)
+						c.push(v.attributes.COUNTY)	
+					})
+					var cu = _.uniq(c, false).sort()
+					$.each(cu, function(i,v){
+						$('#' + t.id + 'selectCounty').append("<option value='" + v + "'>"+ v +"</option")	
 					})
 					$('#' + t.id + 'selectCounty').trigger("chosen:updated");			
 				});
