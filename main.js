@@ -1,12 +1,3 @@
-require({
-    packages: [
-        {
-            name: "jquery",
-            location: "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/",
-            main: "jquery.min"
-        }    
-    ]
-});
 define([
         "dojo/_base/declare", "framework/PluginBase", 'plugins/restoration-explorer/ConstrainedMoveable', 'plugins/restoration-explorer/jquery-ui-1.11.0/jquery-ui',
 		
@@ -22,14 +13,14 @@ define([
 		"dojo/dom", "dojo/dom-class", "dojo/dom-style", "dojo/_base/window", "dojo/dom-construct", "dojo/dom-attr", "dijit/Dialog", "dojo/dom-geometry",
 		"dojo/_base/array", "dojo/_base/lang", "dojo/on", "dojo/parser", "dojo/query", "dojo/NodeList-traverse", "dojo/dnd/Moveable", "dojo/dnd/move",
 		
-		"dojo/text!./layerviz.json", "jquery"
+		"dojo/text!./layerviz.json"
        ],
        function ( declare, PluginBase, ConstrainedMoveable, ui, 
 					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils, Extent, SpatialReference, Point, Graphic,
 					SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Font, TextSymbol, PictureMarkerSymbol, Color, SimpleRenderer,
 					registry, Button, DropDownButton, DropDownMenu, MenuItem, ContentPane, HorizontalSlider, CheckBox, RadioButton,
 					dom, domClass, domStyle, win, domConstruct, domAttr, Dialog, domGeom, array, lang, on, parser, dojoquery, NodeListtraverse, Moveable, move,
-					layerViz, $ ) {
+					layerViz ) {
 					
 			return declare(PluginBase, {
 				toolbarName: "Living Shorelines",

@@ -1,5 +1,5 @@
 {
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
+    "url": "https://services2.coastalresilience.org/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
     "methods": "plugins/restoration-explorer/njmethods.pdf",
 	"userGuide": "plugins/restoration-explorer/UserGuide.pdf",
 	"infoGraphic": "plugins/restoration-explorer/images/infoGraphic.jpg",
